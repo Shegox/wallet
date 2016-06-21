@@ -7,7 +7,7 @@ $journal = getFullWallet();
 foreach ($journal as $row)
 {
     print_r($row);
-    $sql = "INSERT INTO `we_still_breastfeed`(`date`,`refID`,`refTypeID`,`ownerName1`, `ownerID1`, `ownerName2`, `ownerID2`, `argName1`, `argID1`, `amount`, `balance`, `reason`, `owner1TypeID`, `owner2TypeID`) VALUES ('{$row["date"]}','{$row["refID"]}','{$row["refTypeID"]}','{$row["ownerName1"]}', '{$row["ownerID1"]}', '{$row["ownerName2"]}', '{$row["ownerID2"]}', '{$row["argName1"]}', '{$row["argID1"]}', '{$row["amount"]}', '{$row["balance"]}', '{$row["reason"]}', '{$row["owner1TypeID"]}', '{$row["owner2TypeID"]}')";
+    $sql = "INSERT INTO `{$GLOBALS["TABLE"]}`(`date`,`refID`,`refTypeID`,`ownerName1`, `ownerID1`, `ownerName2`, `ownerID2`, `argName1`, `argID1`, `amount`, `balance`, `reason`, `owner1TypeID`, `owner2TypeID`) VALUES ('{$row["date"]}','{$row["refID"]}','{$row["refTypeID"]}','{$row["ownerName1"]}', '{$row["ownerID1"]}', '{$row["ownerName2"]}', '{$row["ownerID2"]}', '{$row["argName1"]}', '{$row["argID1"]}', '{$row["amount"]}', '{$row["balance"]}', '{$row["reason"]}', '{$row["owner1TypeID"]}', '{$row["owner2TypeID"]}')";
     echo $sql;
     var_dump(sql_write($sql));
 }

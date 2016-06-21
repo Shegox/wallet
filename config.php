@@ -3,6 +3,7 @@
 
 //SQL server
 $DATABASE = "eve_wallet";
+$TABLE = "myCorpName";
 $USER = "username";
 $PASSWORD = "userpassword";
 
